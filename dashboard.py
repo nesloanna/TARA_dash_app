@@ -221,7 +221,8 @@ px.set_mapbox_access_token(
 
 
 # create the dash application using the above layout definition
-app = dash.Dash(external_stylesheets=[dbc.themes.FLATLY])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+server = app.server
 
 # load_figure_template('FLATLY')
 # Makes the Bootstrap Themed Plotly templates available
